@@ -100,4 +100,51 @@ Notebook Name: 3-Auto Loader Implementation
 ![Bronze Tables](Databricks-Certified-Data-Engineer-Associate
 /End-to-End Pipelines/Healthcare Patient Analytics Pipeline/3-Auto Loader Implementation.py)
 
+## Phase 3: Silver Layer Transformations (Section 3)
+
+### Step 3.1: Create Notebook - Silver Layer Processing
+
+Notebook Name: 4-Silver Layer Transformations
+
+### Step 3.2: Create User-Defined Functions (UDF)
+
+### Step 3.3: Complex Aggregations with PySpark
+
+## Phase 4: Gold Layer - Analytics Ready (Section 3)
+
+### Step 4.1: Create Notebook - Gold Layer Aggregations
+
+Notebook Name: 5-Gold Layer - Analytics Ready
+
+### Step 4.2: Create Patient Summary Fact Table
+
+## Phase 5: Lakeflow Spark Declarative Pipelines (Section 3)
+
+### Step 5.1: Create Delta Live Tables Pipeline
+
+Notebook Name: 6-Lakeflow Spark Declarative Pipelines
+
+## Step 5.2: Create DLT Pipeline in UI
+
+- Navigate to **Jobs & Pipelines**
+
+- Click **ETL Pipeline** in create new drop down
+
+- Configure:
+
+    - Pipeline name: Healthcare_Patient_Analytics_DLT
+
+    - Next step for your pipeline: Add existing assets
+
+    - Add existing assets: Select 6-Lakeflow Spark Declarative Pipelines
+
+    - Target: endtoenddatasets (catalog) + schema (default so that we can access other schemas in the code e.g., bronze, silver, gold)
+
+    - Storage location: Leave blank (Unity Catalog managed)
+
+    - Compute mode: Serverless (recommended) or Fixed
+
+Click **Run Pipeline**
+
+Note: Unity Catalog automatically manages table storage locations
 
