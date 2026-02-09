@@ -71,7 +71,7 @@ patient_vitals.json
 
 ### Step 1.3: Setup Storage Location
 
-[Setup Storage Location](1-Healthcare Data Creation.py)
+[Setup Storage Location](https://github.com/Subhra-Mishra/Databricks-Certified-Data-Engineer-Associate/blob/main/End-to-End%20Pipelines/Healthcare%20Patient%20Analytics%20Pipeline/1-Healthcare%20Data%20Creation.py)
 
 
 #### Alternative: Upload via UI
@@ -95,7 +95,7 @@ Notebook Name: 3-Auto Loader Implementation
 
 ### Step 2.3: Verify Bronze Tables
 
-[Bronze Tables](3-Auto Loader Implementation.py)
+[Bronze Tables](https://github.com/Subhra-Mishra/Databricks-Certified-Data-Engineer-Associate/blob/main/End-to-End%20Pipelines/Healthcare%20Patient%20Analytics%20Pipeline/3-Auto%20Loader%20Implementation.py)
 
 ## Phase 3: Silver Layer Transformations (Section 3)
 
@@ -107,6 +107,8 @@ Notebook Name: 4-Silver Layer Transformations
 
 ### Step 3.3: Complex Aggregations with PySpark
 
+[Silver Tables](https://github.com/Subhra-Mishra/Databricks-Certified-Data-Engineer-Associate/blob/main/End-to-End%20Pipelines/Healthcare%20Patient%20Analytics%20Pipeline/4-Silver%20Layer%20Transformations.py)
+
 ## Phase 4: Gold Layer - Analytics Ready (Section 3)
 
 ### Step 4.1: Create Notebook - Gold Layer Aggregations
@@ -114,6 +116,8 @@ Notebook Name: 4-Silver Layer Transformations
 Notebook Name: 5-Gold Layer - Analytics Ready
 
 ### Step 4.2: Create Patient Summary Fact Table
+
+[Gold Tables](https://github.com/Subhra-Mishra/Databricks-Certified-Data-Engineer-Associate/blob/main/End-to-End%20Pipelines/Healthcare%20Patient%20Analytics%20Pipeline/5-Gold%20Layer%20-%20Analytics%20Ready.py)
 
 ## Phase 5: Lakeflow Spark Declarative Pipelines (Section 3)
 
@@ -145,3 +149,4 @@ Click **Run Pipeline**
 
 Note: Unity Catalog automatically manages table storage locations
 
+[Lakeflow Spark Declarative Pipeline](https://github.com/Subhra-Mishra/Databricks-Certified-Data-Engineer-Associate/blob/main/End-to-End%20Pipelines/Healthcare%20Patient%20Analytics%20Pipeline/6-Lakeflow%20Spark%20Declarative%20Pipelines.py)
