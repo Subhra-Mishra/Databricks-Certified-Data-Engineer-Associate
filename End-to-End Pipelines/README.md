@@ -1,9 +1,12 @@
 # Healthcare Patient Analytics Pipeline - Certification Practice Guide
-Project Overview
+## Project Overview
 
 This project provides a hands-on experience in building an end-to-end data pipeline for healthcare patient analytics using Databricks. The pipeline ingests patient data, processes it, and generates insights to help healthcare providers make better decisions.
 
-Project Objectives
+Build an end-to-end data engineering pipeline for hospital patient analytics covering all Databricks Certified Data Engineer Associate exam topics.
+
+
+## Project Objectives
 
 The project objectives are as follows:
 
@@ -19,14 +22,10 @@ Deploy the pipeline using Databricks.
 
 
 
-Project Overview
 
-Build an end-to-end data engineering pipeline for hospital patient analytics covering all Databricks Certified Data Engineer Associate exam topics.
+## Prerequisites Setup
 
-
-Prerequisites Setup
-
-1. Databricks Workspace Configuration
+### 1. Databricks Workspace Configuration
 
 Community Edition (free)
 
@@ -37,7 +36,7 @@ Serverless compute enabled (check workspace settings)
 DBFS FileStore access (available in all workspaces)
 
 
-Your Current Setup:
+#### Your Current Setup:
 
  Catalog: endtoenddatasets
 
@@ -48,7 +47,7 @@ Your Current Setup:
  Tables will be created in: bronze, silver, gold schemas
 
 
-2. Sample Data Sources
+### 2. Sample Data Sources
 
 Create sample healthcare datasets (CSV/JSON files):
 
@@ -61,20 +60,21 @@ medical_procedures.csv
 patient_vitals.json
 
 
-Phase 1: Environment & Data Preparation (Section 1 & 2)
 
-Step 1.1: Enable Unity Catalog
+## Phase 1: Environment & Data Preparation (Section 1 & 2)
 
-Step 1.2: Create Sample Data Files
+### Step 1.1: Enable Unity Catalog
+
+### Step 1.2: Create Sample Data Files
 
 [Create Sample Data Files](End-to-End Pipelines/Healthcare Patient Analytics Pipeline/2-Environment & Data Preparation.py)
 
-Step 1.3: Setup Storage Location
+### Step 1.3: Setup Storage Location
 
 [Setup Storage Location](End-to-End Pipelines/Healthcare Patient Analytics Pipeline/1-Healthcare Data Creation.py)
 
 
-Alternative: Upload via UI
+#### Alternative: Upload via UI
 
 - Navigate to EndtoEndDatasets->healthcare->raw
 
@@ -85,15 +85,15 @@ Alternative: Upload via UI
 - Browse or Drag and drop files to upload
 
 
-Phase 2: Auto Loader Implementation (Section 2)
+## Phase 2: Auto Loader Implementation (Section 2)
 
-Step 2.1: Create Notebook - Bronze Layer Ingestion
+### Step 2.1: Create Notebook - Bronze Layer Ingestion
 
 Notebook Name: 3-Auto Loader Implementation
 
-Step 2.2: Auto Loader for JSON Data
+### Step 2.2: Auto Loader for JSON Data
 
-Step 2.3: Verify Bronze Tables
+### Step 2.3: Verify Bronze Tables
 
 [Bronze Tables](End-to-End Pipelines/Healthcare Patient Analytics Pipeline/3-Auto Loader Implementation.py)
 
