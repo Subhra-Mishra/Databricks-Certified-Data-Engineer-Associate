@@ -67,12 +67,12 @@ patient_vitals.json
 
 ### Step 1.2: Create Sample Data Files
 
-[Create Sample Data Files](Databricks-Certified-Data-Engineer-Associate
+![Create Sample Data Files](Databricks-Certified-Data-Engineer-Associate
 /End-to-End Pipelines/Healthcare Patient Analytics Pipeline/2-Environment & Data Preparation.py)
 
 ### Step 1.3: Setup Storage Location
 
-[Setup Storage Location](Databricks-Certified-Data-Engineer-Associate
+![Setup Storage Location](Databricks-Certified-Data-Engineer-Associate
 /End-to-End Pipelines/Healthcare Patient Analytics Pipeline/1-Healthcare Data Creation.py)
 
 
@@ -97,7 +97,7 @@ Notebook Name: 3-Auto Loader Implementation
 
 ### Step 2.3: Verify Bronze Tables
 
-[Bronze Tables](Databricks-Certified-Data-Engineer-Associate
+![Bronze Tables](Databricks-Certified-Data-Engineer-Associate
 /End-to-End Pipelines/Healthcare Patient Analytics Pipeline/3-Auto Loader Implementation.py)
 
 
