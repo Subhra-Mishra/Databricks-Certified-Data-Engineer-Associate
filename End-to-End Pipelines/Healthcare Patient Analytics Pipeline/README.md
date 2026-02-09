@@ -67,7 +67,7 @@ patient_vitals.json
 
 ### Step 1.2: Create Sample Data Files
 
-[Create Sample Data Files](2-Environment & Data Preparation.py)
+[Create Sample Data Files](https://github.com/Subhra-Mishra/Databricks-Certified-Data-Engineer-Associate/blob/main/End-to-End%20Pipelines/Healthcare%20Patient%20Analytics%20Pipeline/2-Environment%20%26%20Data%20Preparation.py)
 
 ### Step 1.3: Setup Storage Location
 
