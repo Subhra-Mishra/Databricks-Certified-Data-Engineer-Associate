@@ -27,37 +27,37 @@ Deploy the pipeline using Databricks.
 
 ### 1. Databricks Workspace Configuration
 
-Community Edition (free)
+    Community Edition (free)
 
-Access to Unity Catalog (available in all workspaces)
+    Access to Unity Catalog (available in all workspaces)
 
-Serverless compute enabled (check workspace settings)
+    Serverless compute enabled (check workspace settings)
 
-DBFS FileStore access (available in all workspaces)
+    DBFS FileStore access (available in all workspaces)
 
 
 #### Your Current Setup:
 
- Catalog: endtoenddatasets
+    Catalog: endtoenddatasets
 
- Schemas: bronze, silver, gold, healthcare, default, information_schema
+    Schemas: bronze, silver, gold, healthcare, default, information_schema
 
- Volume: healthcare.raw (for source data files)
+    Volume: healthcare.raw (for source data files)
 
- Tables will be created in: bronze, silver, gold schemas
+    Tables will be created in: bronze, silver, gold schemas
 
 
 ### 2. Sample Data Sources
 
 Create sample healthcare datasets (CSV/JSON files):
 
-patient_admissions.csv
+    patient_admissions.csv
 
-patient_billing.json
+    patient_billing.json
 
-medical_procedures.csv
+    medical_procedures.csv
 
-patient_vitals.json
+    patient_vitals.json
 
 
 
@@ -76,13 +76,13 @@ patient_vitals.json
 
 #### Alternative: Upload via UI
 
-- Navigate to EndtoEndDatasets->healthcare->raw
+    - Navigate to EndtoEndDatasets->healthcare->raw
 
-- Click Upload to this Volume
+    - Click Upload to this Volume
 
-- Upload CSV/JSON files to UC(Upload files to a Volume in Unity Catalog)
+    - Upload CSV/JSON files to UC(Upload files to a Volume in Unity Catalog)
 
-- Browse or Drag and drop files to upload
+    - Browse or Drag and drop files to upload
 
 
 ## Phase 2: Auto Loader Implementation (Section 2)
@@ -127,25 +127,25 @@ Notebook Name: 6-Lakeflow Spark Declarative Pipelines
 
 ## Step 5.2: Create DLT Pipeline in UI
 
-- Navigate to **Jobs & Pipelines**
+    - Navigate to **Jobs & Pipelines**
 
-- Click **ETL Pipeline** in create new drop down
+    - Click **ETL Pipeline** in create new drop down
 
-- Configure:
+    - Configure:
 
-    - Pipeline name: Healthcare_Patient_Analytics_DLT
+        - Pipeline name: Healthcare_Patient_Analytics_DLT
 
-    - Next step for your pipeline: Add existing assets
+        - Next step for your pipeline: Add existing assets
 
-    - Add existing assets: Select 6-Lakeflow Spark Declarative Pipelines
+        - Add existing assets: Select 6-Lakeflow Spark Declarative Pipelines
 
-    - Target: endtoenddatasets (catalog) + schema (default so that we can access other schemas in the code e.g., bronze, silver, gold)
+        - Target: endtoenddatasets (catalog) + schema (default so that we can access other schemas in the code e.g., bronze, silver, gold)
 
-    - Storage location: Leave blank (Unity Catalog managed)
+        - Storage location: Leave blank (Unity Catalog managed)
 
-    - Compute mode: Serverless (recommended) or Fixed
+        - Compute mode: Serverless (recommended) or Fixed
 
-Click **Run Pipeline**
+    Click **Run Pipeline**
 
 Note: Unity Catalog automatically manages table storage locations
 
