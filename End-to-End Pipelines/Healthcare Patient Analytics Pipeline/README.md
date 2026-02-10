@@ -150,3 +150,110 @@ Click **Run Pipeline**
 Note: Unity Catalog automatically manages table storage locations
 
 [Lakeflow Spark Declarative Pipeline](https://github.com/Subhra-Mishra/Databricks-Certified-Data-Engineer-Associate/blob/main/End-to-End%20Pipelines/Healthcare%20Patient%20Analytics%20Pipeline/6-Lakeflow%20Spark%20Declarative%20Pipelines.py)
+
+## Phase 6: Databricks Workflows & Orchestration (Section 4)
+
+### Step 6.1: Create Job with Multiple Tasks
+
+    Navigate to: Job & Pipelines → Jobs → Add another task or select notebook
+
+    Job Configuration:
+
+    Job name: Healthcare_ETL_Pipeline
+    
+    Compute: Serverless (recommended)
+
+    Task 1: Bronze Ingestion
+
+        Task name: ingest_bronze_data
+
+        Type: Notebook
+
+        Notebook path: 3-Auto Loader Implementation
+
+        Cluster: Serverless
+        
+        Timeout: 30 minutes
+
+    Task 2: Silver Transformation (depends on Task 1)
+
+        Task name: transform_silver\
+
+        Type: Notebook
+
+        Notebook path: 4-Silver Layer Transformations
+
+        Depends on: ingest_bronze_data
+
+        Cluster: Serverless
+
+    Task 3: Gold Aggregation (depends on Task 2)
+
+        Task name: aggregate_gold
+
+        Type: Notebook
+
+        Notebook path: 5-Gold Layer - Analytics Ready
+
+        Depends on: transform_silver
+
+        Cluster: Serverless
+
+### Step 6.2: Configure Schedule
+
+    {
+
+        "schedule": {
+
+            "quartz_cron_expression": "0 0 2 * * ?",
+
+            "timezone_id": "UTC",
+
+            "pause_status": "UNPAUSED"
+
+        }
+         
+    }
+
+### Step 6.3: Test Repair & Rerun
+
+    - Run the job manually
+
+    - Intentionally fail Task 2 (add syntax error)
+
+    - Practice Repair Run from failed task
+
+    - Fix the error and rerun
+
+
+## Phase 7: Unity Catalog Governance (Section 5)
+
+### Step 7.1: Create Roles and Permissions
+
+### Step 7.2: Managed vs External Tables
+
+    -- Key differences:
+
+    -- Managed: 
+
+    --   - Unity Catalog controls storage location
+
+    --   - DROP TABLE deletes both metadata and data
+
+    -- External: 
+
+    --   - You specify the location (Volume path in this case)
+
+    --   - DROP TABLE deletes only metadata, data remains in the Volume
+
+Step 7.4: Data Lineage Exploration
+
+    Navigate to Catalog → endtoenddatasets catalog
+
+    Select gold schema → daily_revenue table
+
+    Click Lineage tab
+
+    View upstream sources and downstream dependencies
+    
+    Explore column-level lineage (if available)
