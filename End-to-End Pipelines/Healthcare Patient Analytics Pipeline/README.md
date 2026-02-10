@@ -255,5 +255,7 @@ Step 7.4: Data Lineage Exploration
     Click Lineage tab
 
     View upstream sources and downstream dependencies
-    
+
     Explore column-level lineage (if available)
+
+[Unity Catalog Governance](https://github.com/Subhra-Mishra/Databricks-Certified-Data-Engineer-Associate/blob/main/End-to-End%20Pipelines/Healthcare%20Patient%20Analytics%20Pipeline/7-Unity%20Catalog%20Governance.py)
